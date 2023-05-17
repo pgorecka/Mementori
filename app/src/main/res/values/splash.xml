@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Mementori.MySplash" parent="Theme.Mementori">
+        <item name="android:windowSplashScreenBackground"></item>
+    </style>
+</resources>
