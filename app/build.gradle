@@ -4,7 +4,7 @@ plugins {
     id 'io.realm.kotlin'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'com.google.gms.google-services'
+//    id 'com.google.gms.google-services'
 }
 
 android {
@@ -52,22 +52,22 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.10.1'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
-    implementation 'androidx.activity:activity-compose:1.7.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-compose:1.6.1'
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.compose.material3:material3:1.2.0-alpha01'
+    implementation 'androidx.compose.material3:material3:1.1.0-alpha03'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
-}
+
 
     // Compose Navigation
-    implementation "androidx.navigation:navigation-compose:2.5.3"
+    implementation 'androidx.navigation:navigation-compose:2.5.3'
 
     // Firebase
     implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
@@ -84,10 +84,10 @@ dependencies {
     // Splash API
     implementation 'androidx.core:core-splashscreen:1.0.0'
 
-    // Mongo DB Realm
-    implementation ('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt') {
+    // MongoDB Realm
+    implementation('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt') {
         version { MutableVersionConstraint ->
-            stricly('1.6.0-native-mt')
+            strictly('1.6.0-native-mt')
         }
     }
     implementation 'io.realm.kotlin:library-sync:1.0.2'
@@ -97,5 +97,25 @@ dependencies {
     kapt 'com.google.dagger:hilt-compiler:2.44.2'
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
 
-    // Google Auth
-    implementation 'com.google.android.gms:play-services-auth:20.4.0'
+/*    // Google Auth
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'*/
+
+    // Coil
+    implementation 'io.coil-kt:coil-compose:2.2.2'
+
+    // Pager - Accompanist
+    implementation 'com.google.accompanist:accompanist-pager:0.27.0'
+
+    // Date-Time Picker
+    implementation 'io.github.vanpra.compose-material-dialogs:datetime:0.9.0'
+
+    // Message Bar Compose
+    implementation 'com.github.stevdza-san:MessageBarCompose:1.0.5'
+
+    // One-Tap Compose
+    implementation 'com.github.stevdza-san:OneTapCompose:1.0.0'
+
+    // Desugar JDK
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
+
+}
